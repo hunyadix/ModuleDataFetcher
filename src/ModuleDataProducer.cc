@@ -129,7 +129,7 @@ int ModuleDataProducer::convertPhaseZeroOfflineLadderToOnlineLadderCoordinate(co
 		case 3:
 			if(0  < ladder && ladder <= 11) converted = 12 - ladder;
 			if(11 < ladder && ladder <= 33) converted = 11 - ladder;
-			if(34 < ladder && ladder <= 44) converted = 56 - ladder;
+			if(33 < ladder && ladder <= 44) converted = 56 - ladder;
 			break;
 	}
 	return converted;
