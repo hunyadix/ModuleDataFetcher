@@ -74,6 +74,11 @@ ModuleData ModuleDataProducer::convertPhaseZeroOfflineOnline(const ModuleData& m
 	return modOn;
 }
 
+bool ModuleDataProducer::isPhaseZeroLadderRowNumberingReversed(const int& ladder)
+{
+	return (ladder + (0 < ladder)) % 2;
+}
+
 /////////////////////
 // Phase-0 Utility //
 /////////////////////

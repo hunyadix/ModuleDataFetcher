@@ -38,6 +38,9 @@ class ModuleDataProducer
 		static ModuleData getPhaseZeroOfflineModuleData(const uint32_t& rawId, const TrackerTopology* const trackerTopology, const std::map<uint32_t, int>& federrors);
 		static ModuleData getPhaseZeroOnlineModuleData (const uint32_t& rawId, const TrackerTopology* const trackerTopology, const std::map<uint32_t, int>& federrors);
 		static ModuleData convertPhaseZeroOfflineOnline(const ModuleData& modOff);
+
+		static bool isPhaseZeroLadderRowNumberingReversed(const int& ladder);
+
 	private:
 		static int isPhaseZeroModuleHalf(const int& layer, const int& ladder);
 		static int getPhaseZeroShellNum(const int& det, const int& ladder, const int& module, const int& disk, const int& blade);
