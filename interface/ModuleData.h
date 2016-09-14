@@ -26,7 +26,8 @@ struct ModuleData_static_variables
 };
 
 template<class Dummy>
-std::string ModuleData_static_variables<Dummy>::list = "det/I:layer:ladder:module:half:outer:side:disk:blade:panel:ring:shl:federr";
+// std::string ModuleData_static_variables<Dummy>::list = "det/I:layer:ladder:module:side:disk:blade:panel:ring:federr";
+std::string ModuleData_static_variables<Dummy>::list = "det/I:layer/I:ladder/I:module/I:side/I:disk/I:blade/I:panel/I:ring/I:shl/I:half/I:outer/I:federr/I";
 template<class Dummy>
 std::map<int, std::string> ModuleData_static_variables<Dummy>::federrortypes =
 {
@@ -51,6 +52,12 @@ std::map<int, std::string> ModuleData_static_variables<Dummy>::federrortypes =
 // ModuleData definition //
 ///////////////////////////
 
+// side -> NOVAL_I
+// disk -> NOVAL_I
+// blade -> side
+// panel -> disk
+// ring -> blade
+
 class ModuleData : public ModuleData_static_variables<void>
 {
 	public:
@@ -58,15 +65,15 @@ class ModuleData : public ModuleData_static_variables<void>
 		int layer;
 		int ladder;
 		int module;
-		int half;
-		int outer;
 		int side;
 		int disk;
 		int blade;
 		int panel;
 		int ring;
-		int shl;
 		int federr;
+		int shl;
+		int half;
+		int outer;
 		unsigned int rawid;
 
 		ModuleData()
@@ -80,14 +87,14 @@ class ModuleData : public ModuleData_static_variables<void>
 			layer  = NOVAL_I;
 			ladder = NOVAL_I;
 			module = NOVAL_I;
-			half   = NOVAL_I;
-			outer  = NOVAL_I;
 			side   = NOVAL_I;
 			disk   = NOVAL_I;
 			blade  = NOVAL_I;
 			panel  = NOVAL_I;
 			ring   = NOVAL_I;
 			shl    = NOVAL_I;
+			half   = NOVAL_I;
+			outer  = NOVAL_I;
 			federr = NOVAL_I;
 			rawid  = std::abs(NOVAL_I);
 		};

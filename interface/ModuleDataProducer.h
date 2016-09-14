@@ -28,13 +28,11 @@ class ModuleDataProducer
 			std::pair<int, int>(3, 34)
 		}};
 
-	public:
-		~ModuleDataProducer();
-
 		/////////////
 		// Phase-0 //
 		/////////////
 
+	public:
 		static ModuleData getPhaseZeroOfflineModuleData(const uint32_t& rawId, const TrackerTopology* const trackerTopology, const std::map<uint32_t, int>& federrors);
 		static ModuleData getPhaseZeroOnlineModuleData (const uint32_t& rawId, const TrackerTopology* const trackerTopology, const std::map<uint32_t, int>& federrors);
 		static ModuleData convertPhaseZeroOfflineOnline(const ModuleData& modOff);
@@ -53,6 +51,7 @@ class ModuleDataProducer
 		// Phase-I //
 		/////////////
 		
+	public:
 		static ModuleData getPhaseOneOfflineModuleData(const uint32_t& rawId, const TrackerTopology* const trackerTopology, const std::map<uint32_t, int>& federrors);
 		static ModuleData getPhaseOneOnlineModuleData (const uint32_t& rawId, const TrackerTopology* const trackerTopology, const std::map<uint32_t, int>& federrors);
 		static ModuleData convertPhaseOneOfflineOnline(const ModuleData& modOff);
