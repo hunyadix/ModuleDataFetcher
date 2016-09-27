@@ -178,7 +178,7 @@ ModuleData ModuleDataProducer::getPhaseOneOfflineModuleData(const uint32_t& rawI
 		mod.blade  = trackerTopology -> pxfBlade(rawId);  // Inner blades: 1-22, outer blades: 23-56
 		mod.panel  = trackerTopology -> pxfPanel(rawId);  // Forward: 1; Backward 2
 		mod.module = trackerTopology -> pxfModule(rawId); // Always 1
-		mod.ring   = 1 + (22 < mod.blade);                 // Inner: 1, Outer: 2
+		mod.ring   = 1 + (22 < mod.blade);                // Inner: 1, Outer: 2
 	}
 	// FED error
 	mod.federr = 0;
