@@ -35,8 +35,8 @@ class ModuleDataProducer
 		// Phase-0 //
 		/////////////
 
-		static ModuleData getPhaseZeroOfflineModuleData(const uint32_t& rawId, const TrackerTopology* const trackerTopology, const std::map<uint32_t, int>& federrors);
-		static ModuleData getPhaseZeroOnlineModuleData (const uint32_t& rawId, const TrackerTopology* const trackerTopology, const std::map<uint32_t, int>& federrors);
+		static ModuleData getPhaseZeroOfflineModuleData(const uint32_t& rawId, const TrackerTopology* const trackerTopology, const std::map<uint32_t, int>& federrors = std::map<uint32_t, int>());
+		static ModuleData getPhaseZeroOnlineModuleData (const uint32_t& rawId, const TrackerTopology* const trackerTopology, const std::map<uint32_t, int>& federrors = std::map<uint32_t, int>());
 		static ModuleData convertPhaseZeroOfflineOnline(const ModuleData& modOff);
 
 		static bool isPhaseZeroLadderRowNumberingReversed(const int& ladder);
@@ -53,8 +53,8 @@ class ModuleDataProducer
 		// Phase-I //
 		/////////////
 		
-		static ModuleData getPhaseOneOfflineModuleData(const uint32_t& rawId, const TrackerTopology* const trackerTopology, const std::map<uint32_t, int>& federrors);
-		static ModuleData getPhaseOneOnlineModuleData (const uint32_t& rawId, const TrackerTopology* const trackerTopology, const std::map<uint32_t, int>& federrors);
+		static ModuleData getPhaseOneOfflineModuleData(const uint32_t& rawId, const TrackerTopology* const trackerTopology, const std::map<uint32_t, int>& federrors = std::map<uint32_t, int>());
+		static ModuleData getPhaseOneOnlineModuleData (const uint32_t& rawId, const TrackerTopology* const trackerTopology, const std::map<uint32_t, int>& federrors = std::map<uint32_t, int>());
 		static ModuleData convertPhaseOneOfflineOnline(const ModuleData& modOff);
 	private:
 		static int convertPhaseOneOfflineModuleToOnlineModuleCoordinate(const int& module);
