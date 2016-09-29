@@ -108,5 +108,25 @@ class ModuleData : public ModuleData_static_variables<void>
 			} 
 			return "FED error not interpreted";
 		}
+
+		int operator==(const ModuleData& rhs)
+		{
+			return
+				det    == rhs.det    &&
+				layer  == rhs.layer  &&
+				ladder == rhs.ladder &&
+				module == rhs.module &&
+				side   == rhs.side   &&
+				disk   == rhs.disk   &&
+				blade  == rhs.blade  &&
+				panel  == rhs.panel  &&
+				ring   == rhs.ring   &&
+				federr == rhs.federr &&
+				shl    == rhs.shl    &&
+				half   == rhs.half   &&
+				outer  == rhs.outer  &&
+				rawid  == rhs.rawid;
+		}
 };
+
 #endif
