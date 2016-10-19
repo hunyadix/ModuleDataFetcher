@@ -109,7 +109,7 @@ class ModuleData : public ModuleData_static_variables<void>
 			return "FED error not interpreted";
 		}
 
-		int operator==(const ModuleData& rhs)
+		int operator==(const ModuleData& rhs) const
 		{
 			return
 				det    == rhs.det    &&
