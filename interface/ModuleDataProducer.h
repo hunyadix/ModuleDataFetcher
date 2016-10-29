@@ -2,7 +2,6 @@
 #define MODULE_DATA_PRODUCER_H
 
 #include "DataFormats/TrackerCommon/interface/TrackerTopology.h"
-
 #include <algorithm>
 
 #include "../interface/ModuleData.h"
